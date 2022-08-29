@@ -3,7 +3,7 @@ import { Column, Model, Table } from 'sequelize-typescript';
 @Table
 export class Equipment extends Model<Equipment> {
   @Column({ primaryKey: true })
-  code: number;
+  code: string;
 
   @Column
   name: string;
@@ -13,9 +13,6 @@ export class Equipment extends Model<Equipment> {
 
   @Column
   amount: number;
-
-  @Column
-  brand: string;
 
   @Column
   observation: Date;
