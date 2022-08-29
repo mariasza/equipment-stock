@@ -2,9 +2,9 @@ import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { CreateEquipmentDto } from './dto/create-equipment.dto';
 import { UpdateEquipmentDto } from './dto/update-equipment.dto';
 import { v4 as uuidv4 } from 'uuid';
-import { Equipments } from 'src/database/models/equipment';
+import { Equipments } from './../../database/models/equipment';
 import { InjectModel } from '@nestjs/sequelize';
-import { PaginationService } from 'src/utils/pagination/pagination.service';
+import { PaginationService } from './../../utils/pagination/pagination.service';
 import { CheckStockEquipmentDto } from './dto/check-stock-equipment.dto';
 
 @Injectable()
