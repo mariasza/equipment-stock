@@ -1,10 +1,12 @@
 module.exports = {
   development: {
-    username: 'user',
-    password: '12345',
-    database: 'mysqldb',
+    username: 'pguser',
+    password: 'pgpassword',
+    database: 'pgsql',
     host: 'localhost',
-    port: 3306,
-    dialect: 'mysql',
+    port: 5432,
+    ssl: { rejectUnauthorized: false },
+    url: process.env.DATABASE_URL,
+    dialect: 'postgres',
   },
 };

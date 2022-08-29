@@ -1,31 +1,32 @@
 version: '3.8'
 services:
-  database:
-    image: mysql:5.7
-    restart: always
-    environment:
-      MYSQL_DATABASE: 'mysqldb'
-      MYSQL_USER: 'user'
-      MYSQL_PASSWORD: '12345'
-      MYSQL_ROOT_PASSWORD: '12345'
+  pgsql:
+    image: postgres:alpine
     ports:
-      - '3306:3306'
-    expose:
-      - '3306'
+      - '5432:5432'
+    container_name: 'pgsql'
+    restart: always
     volumes:
-      - ./src/database/db:/var/lib/mysql
+      - pg-data:/var/lib/postgresql/data
     networks:
-      - mysql-compose-network
+      - pg-compose-network
+    environment:
+      POSTGRES_USER: pguser
+      POSTGRES_PASSWORD: pgpassword
+      POSTGRES_DATABASE: 'pgsql'
+
+
   adminer:
-      image: adminer
-      ports:
-        - 8080:8080
-      networks:
-        - mysql-compose-network
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    networks:
+        - pg-compose-network
 
 networks:
-  mysql-compose-network:
+  pg-compose-network:
     driver: bridge
 
 volumes:
-  database:
+  pg-data:

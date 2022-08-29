@@ -2,11 +2,11 @@ import { SequelizeModuleOptions } from '@nestjs/sequelize';
 import { Equipments } from './models/equipment';
 
 export const configSequelize: SequelizeModuleOptions = {
-  username: 'user',
-  password: '12345',
-  database: 'mysqldb',
-  port: 3306,
-  dialect: 'mysql',
+  username: 'pguser',
+  password: 'pgpassword',
+  database: 'pgsql',
+  port: 5432,
+  dialect: 'postgres',
   timezone: '-04:00',
   models: [Equipments],
 };
