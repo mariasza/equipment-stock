@@ -1,12 +1,11 @@
 import { SequelizeModuleOptions } from '@nestjs/sequelize';
 
 export const configSequelize: SequelizeModuleOptions = {
-  username: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_DATABASE,
-  host: process.env.DB_HOST,
-  port: +process.env.DB_PORT,
-  dialect: 'postgres',
+  username: 'user',
+  password: '12345',
+  database: 'mysqldb',
+  port: 3306,
+  dialect: 'mysql',
   timezone: '-04:00',
   models: [],
 };
