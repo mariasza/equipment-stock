@@ -1,9 +1,9 @@
 import { Column, Model, Table } from 'sequelize-typescript';
 
 @Table
-export class Equipment extends Model<Equipment> {
+export class Equipments extends Model<Equipments> {
   @Column({ primaryKey: true })
-  code: string;
+  code: number;
 
   @Column
   name: string;
@@ -15,7 +15,10 @@ export class Equipment extends Model<Equipment> {
   amount: number;
 
   @Column
-  observation: Date;
+  observation: string;
+
+  @Column
+  createdAt: Date;
 
   @Column
   updatedAt: Date;

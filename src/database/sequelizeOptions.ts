@@ -1,4 +1,5 @@
 import { SequelizeModuleOptions } from '@nestjs/sequelize';
+import { Equipments } from './models/equipment';
 
 export const configSequelize: SequelizeModuleOptions = {
   username: 'user',
@@ -7,5 +8,5 @@ export const configSequelize: SequelizeModuleOptions = {
   port: 3306,
   dialect: 'mysql',
   timezone: '-04:00',
-  models: [],
+  models: [Equipments],
 };
