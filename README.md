@@ -51,3 +51,13 @@ http://localhost:8080
 The link will only be available after the "Running the app" step
 
 ```
+
+## Deploy
+```bash
+# Link
+https://p01--api--equipment-stock--qrb8-dsp2.code.run
+
+# Documentação
+https://p01--api--equipment-stock--qrb8-dsp2.code.run/documentation/
+
+```
