@@ -7,6 +7,6 @@ export const configSequelize: SequelizeModuleOptions = {
   database: 'mysqldb',
   port: 3306,
   dialect: 'mysql',
-  timezone: '-04:00',
+  timezone: '-03:00',
   models: [Equipments],
 };

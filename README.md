@@ -16,7 +16,7 @@ $ npm install
 
 ```bash
 $ docker-compose up -d
-$ npm run db:recreate
+$ npm run db:create
 
 ```
 
