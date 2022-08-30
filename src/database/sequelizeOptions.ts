@@ -1,3 +1,4 @@
+import { SequelizeModuleOptions } from '@nestjs/sequelize';
 import { Equipments } from './models/equipment';
 
 export const configSequelize = {
@@ -8,4 +9,4 @@ export const configSequelize = {
   dialect: 'mysql',
   timezone: '-03:00',
   models: [Equipments],
-};
+} as SequelizeModuleOptions;
