@@ -6,8 +6,11 @@ module.exports = {
     port: parseInt(process.env.NF_EQUIPMENT_STOCK_DB_PORT),
     dialect: 'mysql',
     host: process.env.NF_EQUIPMENT_STOCK_DB_HOST,
-    ssl: {
-      ca: fs.readFileSync(process.env.SSL_CA_CERTIFICATES),
+    ssl: true,
+    dialectOptions: {
+      ssl: {
+        ca: fs.readFileSync(process.env.SSL_CA_CERTIFICATES),
+      },
     },
   },
 };
