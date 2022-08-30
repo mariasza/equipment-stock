@@ -24,9 +24,9 @@ FROM node:14-alpine
 WORKDIR /usr/src/app
 
 # Copy everything required to run the built application into the new container.
-COPY --from=builder /usr/src/app/package*.json ./
-COPY --from=builder /usr/src/app/node_modules/ ./node_modules/
-COPY --from=builder /usr/src/app/dist/ ./dist/
+COPY --from=builder /app/package*.json ./
+COPY --from=builder /app/node_modules/ ./node_modules/
+COPY --from=builder /app/dist/ ./dist/
 
 # Expose the web server's port.
 EXPOSE 3000
